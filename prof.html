@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="prof.css">
+  <title>Регистрация и Вход</title>
+</head>
+<body>
+  <div class="container">
+    <div id="auth">
+      <h2 id="auth_title">Вход</h2>
+      <input type="text" id="username" placeholder="Имя пользователя" required>
+      <input type="password" id="password" placeholder="Пароль" required>
+      <button id="auth_button">Войти</button>
+      <p>Нет аккаунта? <span id="toggle">Зарегистрироваться</span></p>
+    </div>
+
+    <div id="register" style="display: none;">
+      <h2>Регистрация</h2>
+      <input type="text" id="reg_username" placeholder="Имя пользователя" required>
+      <input type="password" id="reg_password" placeholder="Пароль" required>
+      <input type="file" id="icon-upload" accept="image/*">
+      <img id="user-icon" src="" alt="User Icon">
+      <button id="register_button">Зарегистрироваться</button>
+      <p>Уже есть аккаунт? <span id="toggle_login">Войти</span></p>
+    </div>
+
+    <div id="dashboard" style="display: none;">
+      <h2>Личный кабинет</h2>
+      <p>Кабинет: <span id="user_display"></span>
+        <div id="user_display"></div>
+        <img id="user-icon-dashboard" src="" alt="User Icon">
+      </p>
+      <p>Добро пожаловать в профиль</p>
+      <a href="eklizih.html">эксклюзивное видео</a>
+      <button class="beautiful-button" onclick="window.location.href='index.html';">Выйти</button>
+      <button id="logout_button" onclick="window.location.href='index.html';"><p class="p">выйти из кабинета</p></button>
+    </div>
+
+    <script src="prof.js"></script>
+  </div>
+</body>
+</html>

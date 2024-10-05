@@ -1,0 +1,84 @@
+]<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/4881/4881790.png" type="image/x-icon">
+    <link rel="stylesheet" href="!styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar-brand">
+            <img src="https://cdn-icons-png.flaticon.com/128/4881/4881790.png" alt="YouTube Logo">
+            <h1>YouTubeCat</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="prof.html">Профиль</a></li>
+                <li><a href="index.html">На главную</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h2>Избранное</h2>
+        <ul id="favorites-list"></ul>
+    </main>
+
+    <div class="favorites-container">
+        <div class="favorites-list"></div>  
+    </div>
+
+    <script>
+                     function displayFavorites() {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            const favoritesList = document.getElementById('favorites-list');
+            favoritesList.innerHTML = ''; // Очистка списка перед отображением
+
+            if (favorites.length === 0) {
+                favoritesList.innerHTML = '<li>У вас нет избранных видео.</li>';
+            } else {
+                favorites.forEach((video, index) => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = `video${index + 1}.html`; // Create a unique URL for each video
+                    a.textContent = `Видео ${index + 1}`;
+                    li.appendChild(a);
+
+                    // Add a link to the video
+                    const videoLink = document.createElement('a');
+                    videoLink.href = `https://example.com/video${index + 1}.mp4`; // Replace with the actual video URL
+                    videoLink.textContent = 'Смотреть видео';
+                    li.appendChild(videoLink);
+
+                    // Добавление обработчика клика на элемент списка
+                    li.onclick = () => {
+                        // Можно хранить URL видео в объекте видео
+                        localStorage.setItem('currentVideo', JSON.stringify(video));
+                        window.location.href = 'prevos.html'; // Переход на prevos.html
+                    };
+
+                    const removeBtn = document.createElement('span');
+                    removeBtn.textContent = 'Удалить';
+                    removeBtn.className = 'remove-button';
+                    removeBtn.onclick = (event) => {
+                        event.stopPropagation(); // Остановить всплытие события, чтобы не вызывать клик по элементу списка
+                        removeFromFavorites(index);
+                    };
+                    li.appendChild(removeBtn);
+                    favoritesList.appendChild(li);
+        
+                 });
+            }
+        }
+        function removeFromFavorites(index) {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            favorites.splice(index, 1); // Удаление видео по индексу
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+            displayFavorites(); // Обновление списка
+        }
+
+        window.onload = displayFavorites;
+    </script>
+</body>
+</html>

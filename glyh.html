@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/4881/4881790.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Video Page</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="video-container">
+            <iframe class="video" width="100%" height="100%" src="https://www.youtube.com/embed/hp3NBk3Tu_g" title="Кот качает головой (NotOfficialOriginal)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+            <div class="video-title"></div>
+            <div class="user-info">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5mI5BVQjoZ2W7biEJhR5i9eTMDnvOBp04qw&s" referrerpolicy="strict-origin-when-cross-origin" alt="Avatar" class="user-avatar">
+                <div>
+                    <div>человек</div>
+                    <div>
+                      <button class="like-button">👍 Лайк</button>
+                      <button id="subscribe-button">Подписаться</button>
+                    </div>
+                </div>
+            </div>
+            <div class="video-description">я просто человек в Москве с подключеным интернетом</div>
+        </div>
+        <div class="related-videos">
+            <h3>Похожие видео</h3>
+            <div onclick="window.location.href='komar.html';" class="related-video">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMmHodaukpM4BHnwjpRePTOXBErSvm6bXiUw&s" alt="">
+                <div class="related-video-info">
+                    <div class="related-video-title">КОМАРУ МЕМ ЛЕГЕНДА</div>
+                    <div class="related-video-description">автор:инжинер</div>
+                </div>
+            </div>
+            <div onclick="window.location.href='kot_mokr.html';" class="related-video">
+                <img src="data:image/jpeg;base64,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" alt="">
+                <div class="related-video-info">
+                    <div class="related-video-title">ШОК на кота делают пипи</div>
+                    <div class="related-video-description">автор: королева </div>
+                </div>
+            </div>
+            <!-- Добавьте больше похожих видео по желанию -->
+        </div>
+    </div>
+    <footer class="main-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="#">wathap</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#" class="social-icon"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" class="social-icon"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" class="social-icon"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

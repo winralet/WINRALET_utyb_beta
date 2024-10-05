@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/4881/4881790.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Video Page</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="video-container">
+            <iframe class="video" width="100%" height="100%" src="https://www.youtube.com/embed/YuihKMLnZgQ" title="мокрый кот" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+            <div class="video-title"></div>
+            <div class="user-info">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTWuv_SYwV810kpcwD3R-Bne3rPLRjeKb_uw&s" title="Томас, я немного озабочен обвалом на фондовом рынке" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" alt="Avatar" class="user-avatar">
+                <div>
+                    <div>королева вселенной</div>
+                    <div>
+                      <button class="like-button" data-video-id="video-2">Лайк</button>
+                      <button id="subscribe-button">Подписаться</button>
+                    </div>
+                </div>
+            </div>
+            <div class="video-description">типикл ты в 5 лет #рек #норм </div>
+        </div>
+        <div class="related-videos">
+            <h3>Похожие видео</h3>
+            <div onclick="window.location.href='glyh.html';" class="related-video">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYCrT3qOkbfcyVuPDJEeIlBGTF2lS5DEM6wA&s" alt="">
+                <div class="related-video-info">
+                    <div class="related-video-title">глухой кот танцует под фонк</div>
+                    <div class="related-video-description">автор:человек</div>
+                </div>
+            </div>
+            <div onclick="window.location.href='spreh.html';" class="related-video">
+                <img src="data:image/jpeg;base64,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" alt="">
+                <div class="related-video-info">
+                    <div class="related-video-title">кот жостко шпрехает</div>
+                    <div class="related-video-description">автор: Мистер пингвин</div>
+                </div>
+            </div>
+            <!-- Добавьте больше похожих видео по желанию -->
+        </div>
+    </div>
+    <footer class="main-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="#">wathap</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#" class="social-icon"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" class="social-icon"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" class="social-icon"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
